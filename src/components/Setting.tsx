@@ -17,8 +17,8 @@ export default function Setting(props: {
             setShown(!shown())
           }}
         >
-          <button class="i-carbon:settings" />
-          <span ml-1>设置</span>
+          {/* <button class="i-carbon:settings" />
+          <span ml-1>设置</span> */}
         </div>
         <div class="flex">
           <div
