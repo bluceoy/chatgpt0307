@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro"
 
 export const post: APIRoute = async ({ request }) => {
-  const { message, key } = (await request.json()) ?? {}
+  const { message } = (await request.json()) ?? {}
   if (!message) {
     return {
       body: JSON.stringify({
@@ -10,23 +10,13 @@ export const post: APIRoute = async ({ request }) => {
       })
     }
   }
-  if (!key) {
-    return {
-      body: JSON.stringify({
-        success: false,
-        message: "openapi key is required"
-      })
-    }
-  }
 
-  const response = await fetch(`https://api.openai.com/v1/chat/completions`, {
+  const response = await fetch(`http://81.71.73.233:5040/chat-api/stream`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${key}`,
       "Content-Type": `application/json`
     },
     body: JSON.stringify({
-      model: "gpt-3.5-turbo",
       messages: [
         {
           role: "user",

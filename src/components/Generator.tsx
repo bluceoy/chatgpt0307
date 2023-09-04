@@ -277,12 +277,6 @@ export default function () {
               />
             </div>
           </div>
-          {/* <Show when={compatiblePrompt().length}>
-            <PromptList
-              prompts={compatiblePrompt()}
-              select={selectPrompt}
-            ></PromptList>
-          </Show> */}
         </Show>
       </div>
       <Setting
