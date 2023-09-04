@@ -11,7 +11,7 @@ export const post: APIRoute = async ({ request }) => {
     }
   }
 
-  const response = await fetch(`http://81.71.73.233:5040/chat-api/stream`, {
+  const response = await fetch(`http://gz233.ycheng.tech:5040/chat-api/stream`, {
     method: "POST",
     headers: {
       "Content-Type": `application/json`

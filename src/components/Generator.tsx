@@ -2,7 +2,6 @@ import { createEffect, createSignal, For, onMount, Show } from "solid-js"
 import MessageItem from "./MessageItem"
 import type { ChatMessage } from "~/types"
 import Setting from "./Setting"
-import PromptList from "./PromptList"
 import prompts from "~/prompts"
 import { Fzf } from "fzf"
 
